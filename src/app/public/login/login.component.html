@@ -1,0 +1,27 @@
+
+<div class="vertical-center full-ht">
+  <mat-card class="login-card horizontal-center">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </form>     
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
